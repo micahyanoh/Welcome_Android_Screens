@@ -1,0 +1,160 @@
+MDScreen:
+    MDFloatLayout:
+        md_bg_color: [1,1,1,1]
+        Carousel:
+            id: carousel
+            #scroll_timeout: 0
+            on_current_slide: app.current_slide(self.index)
+            MDFloatLayout:
+                Image:
+                    source: 'Assets/about.png'
+                    pos_hint: {'center_x': 0.5,'center_y': 0.7}
+                    size_hint: .8, .8
+                MDLabel:
+                    text: "Add New Recipes & Manage"
+                    pos_hint: {'center_y': 0.47}
+                    halign: 'center'
+                    font_name: 'Poppins-LightItalic.ttf'
+                    font_size: sp(14)
+                    color: rgba(95,88,177,255)
+                MDLabel:
+                    text: 'lorem ipsum lorem ipsum lorem ipsum lorem ipsum ....lorem ipsum'
+                    pos_hint: {'center_x': 0.5,'center_y': 0.35}
+                    size_hint_x: .92
+                    font_size: sp(14)
+                    font_name: 'Poppins-LightItalic.ttf'
+                    halign: 'center'
+                    color: rgba(135, 143, 158, 255)
+                MDTextButton:
+                    text: 'Skip'
+                    pos_hint: {'center_x': 0.88,'center_y': 0.95}
+                    font_name: 'Poppins-LightItalic.ttf'
+                    font_size: sp(13)
+                    color: rgba(111, 111, 111, 255)
+                    on_release:
+                        app.next()
+            MDFloatLayout:
+                Image:
+                    source: 'Assets/home.png'
+                    pos_hint: {'center_x': 0.5,'center_y': 0.7}
+                    size_hint: .8, .8
+                MDLabel:
+                    text: "Add New Recipes & Manage"
+                    pos_hint: {'center_y': 0.47}
+                    halign: 'center'
+                    font_name: 'Poppins-LightItalic.ttf'
+                    font_size: sp(14)
+                    color: rgba(95,88,177,255)
+                MDLabel:
+                    text: 'lorem ipsum lorem ipsum lorem ipsum lorem ipsum ....lorem ipsum'
+                    pos_hint: {'center_x': 0.5,'center_y': 0.35}
+                    size_hint_x: .92
+                    font_size: sp(14)
+                    font_name: 'Poppins-LightItalic.ttf'
+                    halign: 'center'
+                    color: rgba(135, 143, 158, 255)
+                MDTextButton:
+                    text: 'Skip'
+                    pos_hint: {'center_x': 0.88,'center_y': 0.95}
+                    font_name: 'Poppins-LightItalic.ttf'
+                    font_size: sp(13)
+                    color: rgba(111, 111, 111, 255)
+                    on_release:
+                        app.next()
+            MDFloatLayout:
+                Image:
+                    source: 'Assets/s3.png'
+                    pos_hint: {'center_x': 0.5,'center_y': 0.7}
+                    size_hint: .8, .8
+                MDLabel:
+                    text: "Add New Recipes & Manage"
+                    pos_hint: {'center_y': 0.47}
+                    halign: 'center'
+                    font_name: 'Poppins-LightItalic.ttf'
+                    font_size: sp(14)
+                    color: rgba(95,88,177,255)
+                MDLabel:
+                    text: 'lorem ipsum lorem ipsum lorem ipsum lorem ipsum ....lorem ipsum'
+                    pos_hint: {'center_x': 0.5,'center_y': 0.35}
+                    size_hint_x: .92
+                    font_size: sp(14)
+                    font_name: 'Poppins-LightItalic.ttf'
+                    halign: 'center'
+                    color: rgba(135, 143, 158, 255)
+                MDTextButton:
+                    text: 'Skip'
+                    pos_hint: {'center_x': 0.88,'center_y': 0.95}
+                    font_name: 'Poppins-LightItalic.ttf'
+                    font_size: sp(13)
+                    color: rgba(111, 111, 111, 255)
+                    on_release:
+                        app.next()
+            MDFloatLayout:
+                Image:
+                    source: 'Assets/s1.png'
+                    pos_hint: {'center_x': 0.5,'center_y': 0.7}
+                    size_hint: .8, .8
+                MDLabel:
+                    text: "Add New Recipes & Manage"
+                    pos_hint: {'center_y': 0.47}
+                    halign: 'center'
+                    font_name: 'Poppins-LightItalic.ttf'
+                    font_size: sp(14)
+                    color: rgba(95,88,177,255)
+                MDLabel:
+                    text: 'lorem ipsum lorem ipsum lorem ipsum lorem ipsum ....lorem ipsum'
+                    pos_hint: {'center_x': 0.5,'center_y': 0.35}
+                    size_hint_x: .92
+                    font_size: sp(14)
+                    font_name: 'Poppins-LightItalic.ttf'
+                    halign: 'center'
+                    color: rgba(135, 143, 158, 255)
+                Button:
+                    text: 'Get Started'
+                    background_color:[0,0,0,0]
+                    font_name: 'Poppins-LightItalic.ttf'
+                    font_size: sp(13)
+                    size_hint: .6, .075
+                    color: 1 , 1 , 1 , 1
+                    pos_hint: {'center_x': 0.5,'center_y': 0.06}
+                    elevation: 15
+                    on_release:
+                        app.add_todo(title.text,description.text)
+                    canvas.before:
+                        Color: 
+                            rgb: rgba(50, 44, 106, 255)
+                        RoundedRectangle:
+                            size: self.size
+                            pos: self.pos
+                            radius: [25]
+        MDLabel:
+            id: slide0
+            text: "."
+            color: rgba(50, 44, 106, 255)
+            pos_hint: {'center_x': .8,'center_y': 0.22}   
+            font_size: sp(80) 
+            #halign: 'center'   
+        MDLabel:
+            id: slide1
+            text: "."
+            color: rgba(233, 237, 240, 255) 
+            pos_hint: {'center_x': .9,'center_y': 0.22}   
+            font_size: sp(80) 
+            #halign: 'center'   
+        MDLabel:
+            id: slide2
+            text: "."
+            color: rgba(233, 237, 240, 255) 
+            pos_hint: {'center_x': 1,'center_y': 0.22}   
+            font_size: sp(80) 
+            #halign: 'center'  
+        MDLabel:
+            id: slide3
+            text: "."
+            color: rgba(233, 237, 240, 255)  
+            pos_hint: {'center_x': 1.1,'center_y': 0.22}   
+            font_size: sp(80) 
+            #halign: 'center'   
+         
+        
+        
